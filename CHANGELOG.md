@@ -9,6 +9,7 @@ and this project adheres to
 ## [Unreleased]
 
 - 📝(doc) add publiccode.yml
+- 📄(legal) Require contributors to sign a DCO
 
 ## [2.5.0] - 2025-03-18
 
