@@ -31,5 +31,16 @@ if ! whoami > /dev/null 2>&1; then
   fi
 fi
 
+# Set PYTHONPATH to include django-configurations initialization
+cat > /tmp/django_init.py <<EOF
+import os
+import sys
+from configurations.importer import install
+install(check_options=True)
+EOF
+
+# Set PYTHONSTARTUP to automatically run the initialization
+export PYTHONSTARTUP=/tmp/django_init.py
+
 echo "🐳(entrypoint) running your command: ${*}"
 exec "$@"
