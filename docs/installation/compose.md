@@ -171,7 +171,9 @@ openssl rand -base64 32
 ## Backup
 
 Important directories to backup:
-- `data/production/` - Contains all application data
+- `data/production/databases/backend/` - Contains the main application database
+- `data/production/databases/keycloak/` - Contains the Keycloak database
+- `data/production/media/` - Contains uploaded files and media
 - `env.d/production/` - Contains all configuration files
 - `/etc/letsencrypt/` - Contains SSL certificates
 
